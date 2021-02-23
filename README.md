@@ -1,4 +1,4 @@
-# python-observable_data
+# python-observable-data
 ## Overview
 This package provides the feature to notify you of data changes.
 
