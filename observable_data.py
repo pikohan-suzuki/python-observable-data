@@ -14,14 +14,12 @@ class ObservableData(Generic[T]):
 
     @value.setter
     def value(self,value:T):
-        print("value_setter")
         self.data = value
-        self.notificate()
+        self.__notificate()
 
     def observe(self,observer:Observer):
         self.observers += [observer]
 
-    def notificate(self):
+    def __notificate(self):
         for observer in self.observers:
             observer.on_changed(self.data)
-
